@@ -7,6 +7,7 @@ This repository contains a project that consists of a frontend application and a
 - [Prerequisites](#prerequisites)
 - [Installation](#installation)
 - [Downloading Git Submodules](#downloading-git-submodules)
+- [Environment Variables](#environment-variables)
 - [Running the Application](#running-the-application)
 
 ## Prerequisites
@@ -31,6 +32,19 @@ cd MtuciPlease
 This project uses git submodules. To download the submodules, run the following command:
 
 git submodule update --init --recursive
+
+## Environment Variables
+
+The backend application uses environment variables for configuration. These are stored in a `.env` file in the `MTUCI_please_backend` directory.
+
+To create the `.env` file, navigate to the `MTUCI_please_backend` directory and create a new file named `.env`. Then, add your environment variables in this file.
+
+Here's what each variable is for:
+
+- `DEBUG`: A boolean that turns on/off debug mode in Django. For production, this should always be `False`.
+- `SECRET_KEY`: A secret key for a particular Django installation. This should be set to a unique, unpredictable value.
+
+Please make sure to update these environment variables according to your setup before running the application.
 
 ## Running the Application
 
