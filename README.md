@@ -6,8 +6,8 @@ This repository contains a project that consists of a frontend application and a
 
 - [Prerequisites](#prerequisites)
 - [Installation](#installation)
+- [Downloading Git Submodules](#downloading-git-submodules)
 - [Running the Application](#running-the-application)
-
 
 ## Prerequisites
 
@@ -23,18 +23,20 @@ To install MtuciPlease, follow these steps:
 1. Clone the repository:
 git clone https://github.com/Sypoo1/MtuciPlease.git
 
-
 2. Navigate to the project directory:
 cd MtuciPlease
 
+## Downloading Git Submodules
+
+This project uses git submodules. To download the submodules, run the following command:
+
+git submodule update --init --recursive
 
 ## Running the Application
 
 To run MtuciPlease, follow these steps:
 
 1. Build and run the Docker containers:
-docker-compose up --build
-
-
+docker compose up --build
 
 The frontend application will be accessible at `http://localhost` and the backend application at `http://localhost:8000`.
