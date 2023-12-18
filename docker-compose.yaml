@@ -1,0 +1,35 @@
+version: '3.9'
+
+services:
+  backend:
+    volumes:
+      - ./MTUCI_please_backend/mtuci_please_backend/database:/app/mtuci_please_backend/database
+      - static:/static
+    env_file:
+      - ./MTUCI_please_backend/.env
+    build:
+      context: ./MTUCI_please_backend/
+    ports:
+      - "8000:8000"
+    restart: on-failure
+  frontend:
+    build:
+      context: ./MTUCI-please-frontend/
+    volumes:
+      - frontend_build:/app/dist
+  nginx:
+    build:
+      context: ./nginx
+    volumes:
+      - frontend_build:/var/www/frontend_build
+      - static:/static
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+      - frontend
+    restart: on-failure
+
+volumes:
+  static:
+  frontend_build:

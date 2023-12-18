@@ -1,0 +1,6 @@
+[submodule "MTUCI-please-frontend"]
+	path = MTUCI-please-frontend
+	url = https://github.com/VovaGal/MTUCI-please-frontend.git
+[submodule "MTUCI_please_backend"]
+	path = MTUCI_please_backend
+	url = https://github.com/HungryM1NT/MTUCI_please_backend.git
